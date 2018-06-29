@@ -1,0 +1,93 @@
+Lab 04 - Quiz
+Sebastian Gonzalez
+
+---------------------PART 1 numberValidator.py----------------------------------
+try:
+    num = int(input("Give me a number "))
+except ValueError:
+    print("Sorry that is not a number, good bye\n")
+    exit(1)
+
+if num == 0:
+    print(num)
+elif num > 100:
+    print("Sorry, the limit accepted is 100, try again.\n")
+    exit(1)
+else:
+    for i in range(num+1):
+        print(i)
+---------------------------PART 2 average.py------------------------------------
+try:
+    num = int(input("Give me a number "))
+except ValueError:
+    print("Sorry that is not a number, good bye\n")
+    exit(1)
+
+if num == 0:
+    print(num)
+elif num > 100:
+    print("Sorry, the limit accepted is 100, try again.\n")
+    exit(1)
+else:
+    for i in range(num+1):
+        print(i)
+---------------------------PART 3 sillySum.py-----------------------------------
+import math
+import os
+file = open("results.txt","w+")
+if not os.path.isfile(file):
+    print("File not found!\n")
+    exit(1)
+with open('numbers.txt','r') as input:
+    for line in input:
+        num = int(line)
+        sqrt = math.sqrt(num)
+        exp = num**2
+        sum = sqrt + exp
+        file.write(str(sum) + "\n")
+    file.close()
+print("done")
+------------------------PART 4 calculator.py------------------------------------
+import operator
+import math
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print ("Hello Mr. Robot, please enter an operator first\n[+,-,/,*,!,sqrt,log]\n")
+print ("Then enter a number when prompted.\n")
+oper = input("Operator: ")
+try:
+    num1 = int(input("Enter first number: "))
+except ValueError:
+    print ("That was not a number")
+    exit(1)
+if oper == "sqrt":
+    print ("Sqrt: ",math.sqrt(num1))
+elif oper == "!":
+    print ("Factorial: "+str(factorial(num1)))
+elif oper == "log":
+    print ("Log: ", math.log10(num1))
+
+else:
+    try:
+        num2 = int(input("Enter the second number: "))
+    except ValueError:
+        print ("That was not a number")
+        exit(1)
+    if oper =="+":
+        print ("Sum: "+str(num1 + num2))
+    if oper =="-":
+        print ("Sub: "+str(num1 - num2))
+    if oper =="/":
+        if num2 == 0:
+            print ("Can't divide by zero")
+        else:
+            print ("Div: " + str(num1/num2))
+    if oper =="*":
+        print("Mult: "+ str(num1*num2))
+    else:
+        print ("operator not found")
+    exit(1)

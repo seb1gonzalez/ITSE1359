@@ -1,0 +1,41 @@
+lovein1=`grep -c love scripts01`
+Lovein1=`grep -c Love scripts01`
+LOVEin1=`grep -c LOVE scripts01`
+
+lovein2=`grep -c love scripts02`
+Lovein2=`grep -c Love scripts02`
+LOVEin2=`grep -c LOVE scripts02`
+
+lovein3=`grep -c love scripts03`
+Lovein3=`grep -c Love scripts03`
+LOVEin3=`grep -c LOVE scripts03`
+
+lovein4=`grep -c love scripts04`
+Lovein4=`grep -c Love scripts04`
+LOVEin4=`grep -c LOVE scripts04`
+
+echo "SCRIPT 01" >> results2.txt
+
+echo "love was found $lovein1 times in script01" >> results2.txt
+echo "Love was found $Lovein1 times in script01" >> results2.txt
+echo "LOVE was found $LOVEin1 times in script01" >> results2.txt
+
+echo "SCRIPT 02" >> results2.txt
+
+echo "love was found $lovein2 times in script02" >> results2.txt
+echo "Love was found $Lovein2 times in script02" >> results2.txt
+echo "LOVE was found $LOVEin2 times in script02" >> results2.txt
+
+echo "SCRIPT 03" >> results2.txt
+
+echo "love was found $lovein3 times in script03" >> results2.txt
+echo "Love was found $Lovein3 times in script03" >> results2.txt
+echo "LOVE was found $LOVEin3 times in script03" >> results2.txt
+
+echo "SCRIPT 04" >> results2.txt
+
+echo "love was found $lovein4 times in script04" >> results2.txt
+echo "Love was found $Lovein4 times in script04" >> results2.txt
+echo "LOVE was found $LOVEin4 times in script04" >> results2.txt
+
+

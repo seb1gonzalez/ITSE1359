@@ -1,0 +1,18 @@
+22
+BennyStonebraker,413,365
+RL32nd,300,143
+JoyaLen4,220,100
+LoKoth654,69,237
+5
+8
+6
+9This file was created by sebastian at Tue Jun  5 10:29:43 MDT 2018 .
+Here is the current calendar for June 2018
+     June 2018        
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4 _ _5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+                      

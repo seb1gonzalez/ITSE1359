@@ -1,0 +1,10 @@
+now=`date`
+me=`whoami`
+calendar=`cal`
+`> output.txt`
+`head -5 contacts.txt >> output.txt`
+`tail -n 4 numbers.txt >> output.txt`
+echo "This file was created by $me at $now ." >> output.txt
+echo "Here is the current calendar for June 2018" >> output.txt
+`cal >> output.txt`
+echo "All processes completed, use cat output.txt to view results"

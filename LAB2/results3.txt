@@ -1,0 +1,27 @@
+SCRIPT 04
+SCRIPT 03
+SCRIPT 02
+SCRIPT 01
+Real Love
+P.S. I Love You
+love was found 9 times in script04
+Love was found 1 times in script04
+Love was found 1 times in script03
+Love was found 1 times in script01
+love was found 17 times in script03
+love was found 11 times in script01
+LOVE was found 0 times in script04
+LOVE was found 0 times in script03
+LOVE was found 0 times in script02
+Love was found 0 times in script02
+love was found 0 times in script02
+LOVE was found 0 times in script01
+ - Love in script 4
+ - Love in script 3
+ - Love in script 2
+ - Love in script 1
+And I Love Her
+//////////////////////////////////////////
+
+
+
