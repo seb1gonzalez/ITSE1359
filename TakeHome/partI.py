@@ -6,7 +6,7 @@ def printOptions():
     [-a]: read from argument
         [argument 1]: name of file desired to read
         [argument 2]: name of file desired to write
-        [argument 3]: target desired to fin on argument 1
+        [argument 3]: target desired to find on argument 1
     [-i]: interact with user (no arguments needed)
     [-r]: generate random file
         [argument1] corresponds of filename
@@ -17,8 +17,9 @@ def printOptions():
 
 def readFile(filename):
     with open(filename) as file:
-        lines = file.read().splitlines()
+        lines = int(file.read().splitlines())
     file.close()
+    return lines
 
 def writeToFile(str,list):
     file = open(str,'w')
