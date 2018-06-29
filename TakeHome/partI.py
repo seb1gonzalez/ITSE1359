@@ -1,3 +1,4 @@
+#Sebastian Gonzalez
 import os.path
 import math
 from random import randint

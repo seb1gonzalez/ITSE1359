@@ -1,3 +1,4 @@
+#SebastianGonzalez
 import sys
 import partI
 def main():
@@ -31,7 +32,7 @@ def main():
         writeToFile(count_message,file_to_write)
         writeToFile(stdDev_message,file_to_write)
 
-    elif option == ""
+    elif option == "-i"
 
 
 if __name__ == "__main__":
