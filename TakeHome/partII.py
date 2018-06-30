@@ -42,13 +42,9 @@ def main():
             smallest_message = "The smallest item is: ",smallest
             count_message = "Ocurrences: ",count
             stdDev_message = "The standard deviation is: ",stdDev
+            all_msg = sum_message + avg_message + largest_message + smallest_message + count_message + stdDev_message
 
-            writeToFile(sum_message,file_to_write)
-            writeToFile(avg_message,file_to_write)
-            writeToFile(largest_message,file_to_write)
-            writeToFile(smallest_message,file_to_write)
-            writeToFile(count_message,file_to_write)
-            writeToFile(stdDev_message,file_to_write)
+            writeToFile(file_to_write,all_msg)
             break
         else:
             times+=1

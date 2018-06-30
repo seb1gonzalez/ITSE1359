@@ -1,0 +1,12 @@
+The sum is:  
+49 
+The avg is:  
+4.9 
+The largest item is:  
+9 
+The smallest item is:  
+0 
+Ocurrences:  
+0 
+The standard deviation is:  
+13.945644481342553 
