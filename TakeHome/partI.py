@@ -18,12 +18,12 @@ def printOptions():
 
 def readFile(filename):
     with open(filename) as file:
-        lines = int(file.read().splitlines())
+        lines = file.read().splitlines()
     file.close()
     return lines
 
 def writeToFile(str,list):
-    file = open(str,'w')
+    file = open(str,'w+')
     for items in list:
         file.write("%s \n" % items)
     file.close()
@@ -48,9 +48,11 @@ def findTheSmallest(mylist):
 
 def countTotalTimes(target,mylist):
     found = 0
-    for i in len(mylist):
+    i = 0
+    while i < len(mylist):
         if mylist[i] == target:
             found+=1
+        i+=1
     return found
 
 def findStdDev(mylist):
