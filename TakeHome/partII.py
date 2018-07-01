@@ -28,11 +28,8 @@ def make_operations(file_to_read,file_to_write,target_to_find):
     writeToFile(file_to_write,all_msg)
 
 
-def _r_random_selected():
-    filename = sys.argv[2]
-    total = int(sys.argv[3])
-    start =int(sys.argv[4])
-    end = int(sys.argv[5])
+def _r_random_selected(filename,total,start,end):
+
     generateRandom(filename,total,start,end)
     sys.exit(1)
 
@@ -40,30 +37,68 @@ def _r_random_selected():
 def main():
     attemps = 0
     attemp_limit = 5
+    option = sys.argv[1]
     while attemps < attemp_limit:
-        
+        confirm_option = input("Please retype option to confirm script, current option is: "+option)
+        if confirm_option == "-i" or confirm_option == "-r" or confirm_option == "-a":
+            option = confirm_option
+            if option == "-r":
+                if len(sys.argv) < 5:
+                    print ("missing arguments")
+                    attemps+=1
+                    try:
+                        file = input("What is the name of the input file?\n")
+                        total = int(input("How many random numbers?\n")
+                        begin = int(input("start number: "))
+                        end = int(input("end number:"))
+                    except ValueError:
+                        attemps+=1
+                        break
+                    _r_random_selected(file,total,begin,end)
+                    sys.exit(1)
 
-        option = sys.argv[1]
-        if option == "-r":
-            if len(sys.argv) < 5:
-                print ("missing arguments")
 
-            else:
-                _r_random_selected()
+                else:
+                    filename = sys.argv[2]
+                    total = int(sys.argv[3])
+                    start =int(sys.argv[4])
+                    end = int(sys.argv[5])
+                    _r_random_selected(filename,total,start,end)
+                    sys.exit(1)
 
-        elif option == "-a":
-            if len(sys.argv) < 4:
-                print ("mising arguments")
-                file_to_read = sys.argv[2]
-                file_to_write = sys.argv[3]
-                target_to_find = int(sys.argv[4])
+            elif option == "-a":
+                if len(sys.argv) < 4:
+                    print ("mising arguments")
+                    attemps+=1
+                    try:
+                        file_to_read = input("Enter the input file name: ")
+                        file_to_write = input("Enter the output file name: ")
+                        target_to_find = int(input("Enter the target to be found: "))
+                    except ValueError:
+                        attemps+=1
+                        break
+                    make_operations(file_to_read,file_to_write,target_to_find)
+                    sys.exit(1)
+                else:
+                    file_to_read = sys.argv[2]
+                    file_to_write = sys.argv[3]
+                    target_to_find = int(sys.argv[4])
+                    make_operations(file_to_read,file_to_write,target_to_find)
+                    sys.exit(1)
+
+            elif option == "-i":
+                try:
+                    file_to_read = input("Enter the input file name: ")
+                    file_to_write = input("Enter the output file name: ")
+                    target_to_find = int(input("Enter the target to be found: "))
+                except ValueError:
+                    attemps+=1
+                    break
                 make_operations(file_to_read,file_to_write,target_to_find)
+        else:
+            attemps+=1
 
-        elif option == "-i":
-            file_to_read = input("Enter the input file name: ")
-            file_to_write = input("Enter the output file name: ")
-            target_to_find = int(input("Enter the target to be found: "))
-            make_operations(file_to_read,file_to_write,target_to_find)
+
 
 if __name__ == "__main__":
     main()
