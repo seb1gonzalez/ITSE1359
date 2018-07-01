@@ -39,6 +39,7 @@ def main():
     attemp_limit = 5
     option = sys.argv[1]
     while attemps < attemp_limit:
+        print ("Remaining attemps = ", attemp_limit - attemps)
         confirm_option = input("Please retype option to confirm script, current option is: "+option)
         if confirm_option == "-i" or confirm_option == "-r" or confirm_option == "-a":
             option = confirm_option
@@ -46,14 +47,16 @@ def main():
                 if len(sys.argv) < 5:
                     print ("missing arguments")
                     attemps+=1
+
                     try:
                         file = input("What is the name of the input file?\n")
-                        total = int(input("How many random numbers?\n")
+                        total = int(input("How many random numbers?\n"))
                         begin = int(input("start number: "))
                         end = int(input("end number:"))
                     except ValueError:
                         attemps+=1
-                        break
+
+                        continue
                     _r_random_selected(file,total,begin,end)
                     sys.exit(1)
 
@@ -70,13 +73,15 @@ def main():
                 if len(sys.argv) < 4:
                     print ("mising arguments")
                     attemps+=1
+
                     try:
                         file_to_read = input("Enter the input file name: ")
                         file_to_write = input("Enter the output file name: ")
                         target_to_find = int(input("Enter the target to be found: "))
                     except ValueError:
                         attemps+=1
-                        break
+
+                        continue
                     make_operations(file_to_read,file_to_write,target_to_find)
                     sys.exit(1)
                 else:
@@ -93,8 +98,10 @@ def main():
                     target_to_find = int(input("Enter the target to be found: "))
                 except ValueError:
                     attemps+=1
-                    break
+
+                    continue
                 make_operations(file_to_read,file_to_write,target_to_find)
+                sys.exit(1)
         else:
             attemps+=1
 

@@ -17,16 +17,23 @@ def printOptions():
     print (a)
 
 def readFile(filename):
-    with open(filename) as file:
-        lines = file.read().splitlines()
-    file.close()
-    return lines
+    if validateFile(filename):
+        with open(filename) as file:
+            lines = file.read().splitlines()
+        file.close()
+        return lines
+    else:
+        print ("no such file")
 
 def writeToFile(str,list):
-    file = open(str,'w+')
-    for items in list:
-        file.write("%s \n" % items)
-    file.close()
+    if validateFile(str):
+        file = open(str,'w+')
+        for items in list:
+            file.write("%s \n" % items)
+        file.close()
+        exit(1)
+    else:
+        print ("no such file found")
 
 def validateFile(filename):
     return os.path.isfile(filename)
@@ -56,15 +63,20 @@ def findStdDev(mylist):
     sma_squared = sma**2
     stdev = math.sqrt(sma_squared/ len(mylist))
     return stdev
+
 def generateRandom(filename,total,start,end):
-    i = 0
     randomList = []
+    i = 0
     while i < total:
-        randomList[i] = randint(start,end)
+        randomList.insert(i,randint(start,end))
+        i+=1
+    
     if validateFile(filename):
         writeToFile(filename,randomList)
     else:
         print ("no file")
+        exit(1)
+
 
 def main():
     printOptions()
