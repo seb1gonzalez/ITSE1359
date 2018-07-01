@@ -7,6 +7,6 @@ The largest item is:
 The smallest item is:  
 0 
 Ocurrences:  
-0 
+3 
 The standard deviation is:  
 13.945644481342553 

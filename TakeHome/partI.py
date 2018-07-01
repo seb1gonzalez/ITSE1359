@@ -47,13 +47,7 @@ def findTheSmallest(mylist):
     return min(mylist)
 
 def countTotalTimes(target,mylist):
-    found = 0
-    i = 0
-    while i < len(mylist):
-        if mylist[i] == target:
-            found+=1
-        i+=1
-    return found
+    return mylist.count(target)
 
 def findStdDev(mylist):
     avg = calculateAverage(mylist)
