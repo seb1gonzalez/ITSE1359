@@ -7,7 +7,7 @@ password = input("Please enter a password\n")
 # else:
 #     print ("Self-destroying")
 #-------------------For Problem 2---------------------
-if re.search(r'([\d\w][#$%^&*\-\_\!])+',password):
+if (re.search("[a-zA-Z]",password) and re.search("[0-9]",password)and re.search("[#$%^&*\-\_\!]",password)):
     if len(password) > 7:
         print ("Success! Your password is strong enough")
     else:
